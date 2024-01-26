@@ -6,9 +6,9 @@ namespace ContactManager.Models
     {
         public int ContactId { get; set; }
         [Required(ErrorMessage = "Please enter a first name.")]
-        public string Firstname { get; set; } = null!;
+        public string Firstname { get; set; } = string.Empty;
         [Required(ErrorMessage = "Please enter a last name.")]
-        public string Lastname { get; set; } = null!;
+        public string Lastname { get; set; } = string.Empty;
         [Required(ErrorMessage = "Please enter a phone number.")]
         public string Phone { get; set; } = null!;
         [Required(ErrorMessage = "Please enter an email address.")]
@@ -17,5 +17,10 @@ namespace ContactManager.Models
 
         public string Slug => Firstname?.Replace(' ', '-').ToLower() + '_' + Lastname?.Replace(' ', '-').ToLower();
 
+        [Required(ErrorMessage = "Please select a category.")]
+        public string CategoryId { get; set; } = string.Empty;
+
+        [ValidateNever]
+        public Category Category { get; set; } = null!;
     }
 }

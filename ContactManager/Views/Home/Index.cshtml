@@ -12,6 +12,7 @@
 			<th>Last Name</th>
 			<th>Phone</th>
 			<th>Email</th>
+			<th>Category</th>
 			<th></th>
 		</tr>
 	</thead>
@@ -23,6 +24,7 @@
 				<td>@contact.Lastname</td>
 				<td>@contact.Phone</td>
 				<td>@contact.Email</td>
+				<td>@contact.Category.Name</td>
 				<td>
 					<a asp-controller="Contact" asp-action="Edit" asp-route-id="@contact.ContactId" asp-route-slug="@contact.Slug" class="btn btn-outline-primary">Edit</a>
 					<a asp-controller="Contact" asp-action="Delete" asp-route-id="@contact.ContactId" asp-route-slug="@contact.Slug" class="btn btn-outline-danger">Delete</a>

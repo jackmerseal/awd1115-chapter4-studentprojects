@@ -30,6 +30,7 @@ namespace ContactManager.Controllers
         public IActionResult Add()
         {
             ViewBag.Action = "Add New Contact";
+            ViewBag.Categories = Context.Categories.OrderBy(c => c.Name).ToList();
             return View("Edit", new Contact());
         }
 
@@ -37,6 +38,7 @@ namespace ContactManager.Controllers
         public IActionResult Edit(int id)
         {
             ViewBag.Action = "Edit Contact";
+            ViewBag.Categories = Context.Categories.OrderBy(c => c.Name).ToList();
             var contact = Context.Contacts.Find(id);
             return View(contact);
         }
@@ -60,6 +62,7 @@ namespace ContactManager.Controllers
             else
             {
                 ViewBag.Action = (contact.ContactId == 0) ? "Add New Contact" : "Edit Contact";
+                ViewBag.Categories = Context.Categories.OrderBy(c => c.Name).ToList();
                 return View(contact);
             }
         }
