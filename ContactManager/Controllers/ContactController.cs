@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ContactManager.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ContactManager.Controllers
 {
@@ -66,6 +67,15 @@ namespace ContactManager.Controllers
                 return View(contact);
             }
         }
+
+        [HttpGet]
+        public IActionResult Details(int id)
+        {
+			//var contact = Context.Contacts.Find(id);
+            var contact2 = Context.Contacts.Include(c => c.Category).FirstOrDefault(c => c.ContactId == id);
+            //var contact = Context.Contacts.Include(c => c.Category).FirstOrDefault(c => c.ContactId == id);
+			return View(contact2);
+		}
 
         public IActionResult Index()
         {

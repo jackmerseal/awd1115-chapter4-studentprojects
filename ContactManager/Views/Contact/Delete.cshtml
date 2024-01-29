@@ -3,10 +3,14 @@
 	ViewBag.Title = "Delete Movie";
 }
 
-<h2>Confirm Deletion</h2>
-<h3>@Model.Firstname @Model.Lastname</h3>
-<form asp-action="Delete" method="post">
-	<input type="hidden" asp-for="ContactId" />
-	<button type="submit" class="btn btn-danger">Delete</button>
-	<a asp-controller="Home" asp-action="Index" class="btn btn-secondary">Cancel</a>
-</form>
+<div class="container">
+	<h1 class="p-5 text-center bg-black text-white">Contact Manager</h1>
+	<h2>Delete Contact</h2>
+	<p>Do you really want to delete @Model.Firstname @Model.Lastname?</p>
+	<form asp-action="Delete" method="post">
+		<input type="hidden" asp-for="ContactId" />
+		<button type="submit" class="btn bg-black text-white">Yes</button>
+		<a asp-controller="Home" asp-action="Index" class="btn bg-black text-white">No</a>
+	</form>
+</div>
+
