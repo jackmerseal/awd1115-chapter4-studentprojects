@@ -90,38 +90,38 @@ namespace ContactManager.Migrations
                         new
                         {
                             ContactId = 1,
-                            CategoryId = "",
+                            CategoryId = "F",
                             Email = "james_hetfield@insideranken.org",
                             Firstname = "James",
                             Lastname = "Hetfield",
-                            Phone = "1234567890"
+                            Phone = "123-456-7890"
                         },
                         new
                         {
                             ContactId = 2,
-                            CategoryId = "",
+                            CategoryId = "F",
                             Email = "lars_ulrich@insideranken.org",
                             Firstname = "Lars",
                             Lastname = "Ulrich",
-                            Phone = "0987654321"
+                            Phone = "098-765-4321"
                         },
                         new
                         {
                             ContactId = 3,
-                            CategoryId = "",
+                            CategoryId = "F",
                             Email = "kirk_hammett@insideranken.org",
                             Firstname = "Kirk",
                             Lastname = "Hammett",
-                            Phone = "1357924680"
+                            Phone = "135-792-4680"
                         },
                         new
                         {
                             ContactId = 4,
-                            CategoryId = "",
+                            CategoryId = "F",
                             Email = "robert_trujillo@insideranken.org",
                             Firstname = "Robert",
                             Lastname = "Trujillo",
-                            Phone = "2468013579"
+                            Phone = "246-801-3579"
                         });
                 });
 
