@@ -23,14 +23,10 @@
 			{
 				<tr>
 					<td><a asp-controller="Contact" asp-action="Details" asp-route-id="@contact.ContactId" class="text-primary">@contact.Firstname</a></td>
-					<td><a asp-controller="Contact" asp-action="Details" class="text-primary">@contact.Lastname</a></td>
+					<td><a asp-controller="Contact" asp-action="Details" asp-route-id="@contact.ContactId" class="text-primary">@contact.Lastname</a></td>
 					<td>@contact.Phone</td>
 					<td>@contact.Email</td>
 					<td>@contact.Category.Name</td>
-					<td>
-						<a asp-controller="Contact" asp-action="Edit" asp-route-id="@contact.ContactId" asp-route-slug="@contact.Slug" class="btn btn-outline-primary">Edit</a>
-						<a asp-controller="Contact" asp-action="Delete" asp-route-id="@contact.ContactId" asp-route-slug="@contact.Slug" class="btn btn-outline-danger">Delete</a>
-					</td>
 				</tr>
 				<input type="hidden" asp-for="@contact.ContactId" />
 			}

@@ -4,37 +4,36 @@
 }
 <div class="container">
 	<h1 class="p-5 text-center bg-black text-white">Contact Manager</h1>
-	<h2>@ViewBag.Title</h2>
+	<h2 class="ms-3">@ViewBag.Title</h2>
 	<form asp-action="Edit" method="post">
-		<div class="form-group">
-			<label asp-for="Firstname">First Name</label>
-			<input asp-for="Firstname" class="form-control" />
+		<div class="m-3">
+			<label class="m-1" asp-for="Firstname">First Name</label>
+			<input asp-for="Firstname" class="form-control" readonly/>
 			<span asp-validation-for="Firstname" class="text-danger"></span>
 		</div>
-		<div class="form-group">
-			<label asp-for="Lastname">Last Name</label>
-			<input asp-for="Lastname" class="form-control" />
+		<div class="m-3">
+			<label class="m-1" asp-for="Lastname">Last Name</label>
+			<input asp-for="Lastname" class="form-control" readonly />
 			<span asp-validation-for="Lastname" class="text-danger"></span>
 		</div>
-		<div class="form-group">
-			<label asp-for="Phone">Phone</label>
-			<input asp-for="Phone" class="form-control" />
+		<div class="m-3">
+			<label class="m-1" asp-for="Phone">Phone</label>
+			<input asp-for="Phone" class="form-control" readonly/>
 			<span asp-validation-for="Phone" class="text-danger"></span>
 		</div>
-		<div class="form-group">
-			<label asp-for="Email">Email</label>
-			<input asp-for="Email" class="form-control" />
+		<div class="m-3">
+			<label class="m-1" asp-for="Email">Email</label>
+			<input asp-for="Email" class="form-control" readonly/>
 			<span asp-validation-for="Email" class="text-danger"></span>
 		</div>
-		<div class="">
-			<label asp-for="Category.Name">Category</label>
-			<input asp-for="Category.Name" />
+		<div class="m-3">
+			<label class="m-1" asp-for="Category.Name">Category</label>
+			<input asp-for="Category.Name" class="form-control" readonly />
 		</div>
-
-		<div class="form-group">
+		<div class="m-3">
 			<a asp-controller="Contact" asp-action="Edit" asp-route-id="@Model.ContactId" asp-route-slug="@Model.Slug" class="btn bg-black text-white">Edit</a>
 			<a asp-controller="Contact" asp-action="Delete" asp-route-id="@Model.ContactId" asp-route-slug="@Model.Slug" class="btn bg-black text-white">Delete</a>
-			<a asp-controller="Home" asp-action="Index" class="btn bg-black text-white">Cancel</a>
+			<a asp-controller="Home" asp-action="Index" class="btn bg-black text-white">Home</a>
 		</div>
 	</form>
 </div>

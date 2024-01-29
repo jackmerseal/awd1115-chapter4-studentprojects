@@ -4,29 +4,29 @@
 }
 <div class="container">
 	<h1 class="p-5 text-center bg-black text-white">Contact Manager</h1>
-	<h2>@ViewBag.Action</h2>
+	<h2 class="ms-3">@ViewBag.Action</h2>
 	<form asp-action="Edit" method="post">
-		<div class="form-group">
+		<div class="m-3">
 			<label asp-for="Firstname">First Name</label>
 			<input asp-for="Firstname" class="form-control" />
 			<span asp-validation-for="Firstname" class="text-danger"></span>
 		</div>
-		<div class="form-group">
+		<div class="m-3">
 			<label asp-for="Lastname">Last Name</label>
 			<input asp-for="Lastname" class="form-control" />
 			<span asp-validation-for="Lastname" class="text-danger"></span>
 		</div>
-		<div class="form-group">
+		<div class="m-3">
 			<label asp-for="Phone">Phone</label>
 			<input asp-for="Phone" class="form-control" />
 			<span asp-validation-for="Phone" class="text-danger"></span>
 		</div>
-		<div class="form-group">
+		<div class="m-3">
 			<label asp-for="Email">Email</label>
 			<input asp-for="Email" class="form-control" />
 			<span asp-validation-for="Email" class="text-danger"></span>
 		</div>
-		<div class="form-group">
+		<div class="m-3">
 			<label asp-for="CategoryId" class="form-label">Category</label>
 			<select asp-for="CategoryId" class="form-control">
 				<option value="">-- Select Category --</option>
@@ -38,9 +38,9 @@
 			<input type="hidden" asp-for="ContactId" />
 			<span asp-validation-for="CategoryId" class="text-danger"></span>
 		</div>
-		<div class="form-group">
-			<button type="submit" class="btn btn-primary">Save</button>
-			<a asp-controller="Home" asp-action="Index" class="btn btn-outline-secondary">Cancel</a>
+		<div class="m-3">
+			<button type="submit" class="btn bg-black text-white">Save</button>
+			<a asp-controller="Contact" asp-action="Details" asp-route-id="@Model.ContactId" class="btn bg-black text-white">Cancel</a>
 		</div>
 	</form>
 </div>
